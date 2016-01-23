@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 /* Customize
  * ============================================================= */
 
@@ -14,7 +14,7 @@ $username = '262767665@qq.com';
  * @see https://github.com/settings/tokens/new
  * @var string
  */
-$api_token = 'afb45a75d9c32c8f5e48b981864b0b6b960fb0ea';
+$api_token = 'b501a7c892320aeb5c6ff60f6574d60f786f0e8e';
 
 
 /* Don't touch

@@ -20,13 +20,16 @@ function q(name) {
         editr_Width_Max = "100%";
 
     var my = function() {
-        $(".editr__nav li").on("click", () => {
-            alert(1)
-        })
+        var k = new Kibo();
+        k.down(['up', 'down'], function() {
+          document.write('up or down arrow key pressed');
+        }).up('tab', function() {
+          document.write('TAB key released');
+        });
     }
 
     my.prototype.init = function(){
-        $.post('./editr/libs/proxy.gist.php', {
+        $.post('http://localhost:8080/edit/editr/libs/proxy.gist.php', {
             id: q("id")
         }, function(result) {
 
@@ -53,7 +56,7 @@ function q(name) {
                     el: this,
                     path: './',
                     view: 'vertical',
-                    gistProxyURL: './editr/libs/proxy.gist.php',
+                    gistProxyURL: 'http://localhost:8080/edit/editr/libs/proxy.gist.php',
                     callback: function(editr) {
                         $(".editr__editor").addClass("ace-spacegray");
                         $(".editr__editor").css("font-size", "16px");
@@ -75,8 +78,6 @@ function q(name) {
                 });
 
             })
-
-
         });
     }
 
