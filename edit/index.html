@@ -24,6 +24,20 @@
         .editr__editor--html{
           width: 50%;
         }
+        /* Flex style */
+        .flex {
+          margin: 0 auto;
+          display: flex;
+          height: 400px;
+          width: 50%;
+        }
+        .flex div {
+          flex-grow: 1;
+          transition: flex-grow 0.5s ease-in-out;
+        }
+        .flex div:hover {
+          flex-grow: 3;
+        }
     </style>
     <!-- Editr style -->
     <link rel="stylesheet" href="./editr/main.m.css" media="screen" title="no title" charset="utf-8">
@@ -32,7 +46,7 @@
 </head>
 
 <body>
-    <div class="editr ace-spacegray"></div>
+    <div class="editr ace-spacegray flex"></div>
     <script src="http://libs.useso.com/js/jquery/2.1.0/jquery.min.js" charset="utf-8"></script>
     <script src="http://cdn.jsdelivr.net/ace/1.1.01/min/ace.js"></script>
     <script src="http://cdn.jsdelivr.net/ace/1.1.01/min/ext-emmet.js"></script>
@@ -41,7 +55,8 @@
     <script src="./editr/libs/parser.less.js"></script>
     <script src="./editr/editr.js"></script>
     <script src="./editr/libs/kibo.js" charset="utf-8"></script>
-    <script src="./editr/my.js" charset="utf-8"></script><script src="https://gist.github.com/ZhouHengYi/c7e10c35af2692c33e54.js"></script>
+    <script src="./editr/my.js" charset="utf-8"></script>
+
 </body>
 
 </html>

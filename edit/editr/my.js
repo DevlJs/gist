@@ -29,7 +29,7 @@ function q(name) {
     }
 
     my.prototype.init = function(){
-        $.post('http://localhost:8080/edit/editr/libs/proxy.gist.php', {
+        $.post('http://localhost:8080/php/proxy.gist.php', {
             id: q("id")
         }, function(result) {
 
@@ -56,7 +56,7 @@ function q(name) {
                     el: this,
                     path: './',
                     view: 'vertical',
-                    gistProxyURL: 'http://localhost:8080/edit/editr/libs/proxy.gist.php',
+                    gistProxyURL: 'http://localhost:8080/php/proxy.gist.php',
                     callback: function(editr) {
                         $(".editr__editor").addClass("ace-spacegray");
                         $(".editr__editor").css("font-size", "16px");
